@@ -48,6 +48,7 @@ En esta sección encuentras los atajos de los READMEs de los ejercicios, cada ej
 | Módulo  | Link    |
 | ------- | ------- |
 | Fundamentos Web | [README](/fundamentos-web/README.md) |
+| Fundamentos JS | [README](/javascript/README.md) |
 
 ## Notas Importantes ‼️
 <h4>Durante el curso cada semana actualiza tu fork con el código <code>master</code> del repositorio oficial</h4>
