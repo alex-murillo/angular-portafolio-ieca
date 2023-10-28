@@ -17,7 +17,7 @@
         <ul>
             <li>
                 <!-- Completa la navegación -->
-                <a href="#">Acerca de</a>
+                <a href="acerca.html">Acerca de</a>
             </li>
         </ul>
     </nav>
@@ -26,13 +26,33 @@
         <h2>Formulario</h2>
         <!-- Completa el fomulario -->
         <form>
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" required>
-        
-            <label for="apellido">Apellido:</label>
+            <br><br>
+            
+            <label for="apellido">Apellido: </label>
             <input type="text" id="apellido" name="apellido" required>
-
+            <br><br>
             <!-- Agrega los inputs faltantes -->
+            <label for="email">Correo Electrónico: </label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="contrsena">Contraseña: </label>
+            <input type="password" id="contrsena" name="contrsena" required>
+            <br><br>
+            <label for="fecha_nac">Fecha de Nacimiento: </label>
+            <input type="date" id="fecha_nac" name="fecha_nac" required>
+            <br><br>
+            <label for="telefono">Teléfono: </label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <br><br>
+            <label for="direccion">Dirección: </label>
+            <textarea type="wwwwwwwwwwwwwwww" id="direccion" name="direccion" required rows="4" cols="50"></textarea>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Registrar">
         </form>
     </main>
 
