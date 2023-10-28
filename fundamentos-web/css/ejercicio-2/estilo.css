@@ -54,20 +54,25 @@ main {
 .rojo {
     background-color: red;
     color: white;
+    contain: paint;
+    border-bottom: black;
 }
 
 .verde {
     background-color: green;
     color: white;
+    contain: paint;
 }
 
 .naranja {
     background-color: orange;
+    contain: paint;
 }
 
 .azul {
     background-color: blue;
     color: white;
+    contain: paint;
 }
 
 footer {
