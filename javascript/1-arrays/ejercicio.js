@@ -38,6 +38,10 @@ function vaciarCarritoConTotal() {
     ];
 
     // Completa aquí código de escenario 1
+    for (let i = 0; i < carrito.length; i++){
+        carrito.splice(carrito[i])
+      }
+      console.log('Carrito vacio',carrito)
 }
 
 /*
@@ -55,7 +59,11 @@ function cuentaDeAlumnos() {
     const grupoA = ["Juan Perez","Maria Garcia","Carlos Rodriguez","Luisa Martinez","Pedro Sanchez","Ana Lopez","Miguel Ramirez","Laura Fernandez","David Torres","Sofia Gonzalez","Javier Hernandez","Isabel Jimenez","Andres Diaz","Elena Castro"]
     const grupoB = ["Alejandro Ruiz","Carmen Ortega","Roberto Mendoza","Patricia Vargas","Eduardo Morales","Olga Reyes","Gustavo Paredes","Natalia Soto","Hector Delgado","Monica Castillo","Raul Rios","Raquel Valdez","Fernando Acosta","Silvia Castro","Manuel Vega","Lourdes Guzman","Jorge Navarro"]
 
-    // Completa aquí código de Escenario 2
+    // Completa aquí código de Escenario 2  
+    const grupoUnido = grupoA.concat(grupoB);
+
+    //console.log(grupoUnido);
+    console.log('Resultado:\n', grupoUnido.length)
 }
 
 /*
@@ -81,6 +89,30 @@ function transmitiendoBatch() {
     "DDDDDDDDDDDD","11010100101","01010101010","11110000000","00001111000","10101010101","11001100110","00110011001","11111111111","00000000000","10000000000","01000000000","11000000000","00100000000","10100000000","01100000000","11100000000","00010000000","10010000000","01010000000","11010000000","00110000000","10110000000","01110000000","11110000000","00001000000","10001000000","01001000000","11001000000","00101000000","10101000000","01101000000","11101000000","00011000000","10011000000","01011000000","11011000000","00111000000","10111000000","01111000000","11111000000","00000100000","10000100000","01000100000","11000100000","00100100000","10100100000","01100100000","11100100000","00010100000"];
 
     // Completa aquí código de Escenario 3
+    let total = backup.length
+    let total_seccion = total/4
+    for (let i = 0; i <= total; i++){
+        if (i <= total_seccion){
+        var seccion1 = backup.slice(0,total_seccion)
+        }
+        else if (i < (total_seccion*2)){
+        var seccion2 = backup.slice(total_seccion,total_seccion*2)
+        }
+        else if (i < total_seccion*3){
+        var seccion3 = backup.slice(total_seccion*2,total_seccion*3)
+        }
+        else if (i < total_seccion*4){
+        var seccion4= backup.slice(total_seccion*3,total)
+        }
+        
+    }
+        
+    console.log(seccion1, seccion1.length)
+    console.log(seccion2, seccion2.length)
+    console.log(seccion3, seccion3.length)
+    console.log(seccion4, seccion4.length)
+
+
 }
 
 //vaciarCarritoConTotal()
