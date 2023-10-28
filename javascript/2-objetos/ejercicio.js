@@ -21,9 +21,19 @@
 const juegos = {
     aguila: 0,
     sol: 1,
-    tirarMoneda: undefined
+    tirarMoneda: function(){
+        // Obtenemos el numero random de tipo flotante entre 0 y 1
+        var valor = Math.random();
+        // Utilizamos el metodo round para redondear al entero mas cercano
+        if (Math.round(valor) === juegos.aguila){
+          console.log("Cae Aguila", Math.round(valor));
+        }
+        else {
+          console.log("Cae Sol", Math.round(valor));
+        }
+    }
 }
 
 for (let tiros = 0; tiros < 10; tiros++) {
-    // juegos.tirarMoneda()
+    juegos.tirarMoneda()
 }
