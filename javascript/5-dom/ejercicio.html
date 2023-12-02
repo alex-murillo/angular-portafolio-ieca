@@ -5,15 +5,18 @@
 </head>
 
 <body>
+    <p>El valor ingresado en el recuadro sera agregado en la linea de abajo</p> 
     <div style="display: flex">
+        
         <input type="text" id="inputEncabezado" placeholder="Ingresa el nuevo encabezado"
         style="width:70%;margin-bottom:10px" />
     </div>
+    <p>Para agregar el encaezado de clic al boton Establecer Encabezado</p> 
     <div style="display: flex">
         <button id="btnActualizacion" onClick="modificarEncabezado()" style="margin-right: 10px">Establecer Encabezado</button>
         <button id="btnUndo" disabled>Encabezado Anterior</button>
     </div>
-    <h1 id="encabezado">...</h1>
+    <h1 id="encabezado">__________________</h1>
 
     <script>
 
@@ -40,7 +43,21 @@
 
         function modificarEncabezado() {
             /* Tu código aquí */
+            let inputValue = document.getElementById("inputEncabezado").value;
+            if (!inputEncabezado.value){
+                alert("El recuadro del encabezado no debe estar vacio");
+            }
+            else{
+                //console.log(inputEncabezado.value)
+                document.getElementById("encabezado").innerHTML = inputEncabezado.value; 
+            }
+            
         }
+
+        btnUndo.addEventListener('click', ()=> {
+            
+        })
+        
     </script>
 </body>
 
