@@ -1,5 +1,10 @@
 export interface Pokemon {
+  id: number
   name: string
   url: string
-  edad?: number
+  xp?: number
+  image: any
+  height: number
+  weight: number
+  type: string
 }

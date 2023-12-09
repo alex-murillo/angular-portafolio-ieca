@@ -26,10 +26,10 @@ const juegos = {
         var valor = Math.random();
         // Utilizamos el metodo round para redondear al entero mas cercano
         if (Math.round(valor) === juegos.aguila){
-          console.log("Cae Aguila", Math.round(valor));
+          console.log("Cae Aguila", juegos.aguila);
         }
         else {
-          console.log("Cae Sol", Math.round(valor));
+          console.log("Cae Sol", juegos.sol);
         }
     }
 }
