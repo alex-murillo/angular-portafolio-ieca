@@ -40,6 +40,8 @@
         const btnUndo = document.getElementById('btnUndo')
         const tituloEncabezado = document.getElementById('encabezado')
         const inputEncabezado = document.getElementById('inputEncabezado')
+        
+        var listaTitulos = []
 
         function modificarEncabezado() {
             /* Tu código aquí */
@@ -49,15 +51,28 @@
             }
             else{
                 //console.log(inputEncabezado.value)
+                listaTitulos.push(inputEncabezado.value)
                 document.getElementById("encabezado").innerHTML = inputEncabezado.value; 
+                console.log(listaTitulos)
+
+                if (listaTitulos.length >= 2){
+                    btnUndo.disabled = false
+                }
             }
-            
         }
 
-        btnUndo.addEventListener('click', ()=> {
-            console.log("HHSHSHSHSHSHSSHH")
+        btnUndo.addEventListener('click', function () {
+            if (listaTitulos.length == 1){
+                btnUndo.disabled = true;
+                document.getElementById("encabezado").innerHTML = listaTitulos.pop()
+            }
+            
+            else if (listaTitulos.length > 1){
+                listaTitulos.pop()
+                document.getElementById("encabezado").innerHTML = listaTitulos.pop();
+            }
+            console.log('DESPUES',listaTitulos)
         })
-        
     </script>
 </body>
 
